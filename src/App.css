@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+body {
+  background-color: #fff888;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.shopping-list-container {
+  margin-left: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.shopping-list-items-container {
+  overflow-x: auto;
+  margin-bottom: 12px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.shopping-item-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.shopping-item-checkbox-container {
+  margin-right: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-field-container {
+  background-color: #fff888;
+  margin-bottom: 64px;
+}
+
+.input-field-group-container input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 80vw;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-arrow {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input {
+  background-color: #fff888;
+}
+
+.item-checkbox {
+  width: 24px;
+  height: 24px;
+}
+
+.edit-input {
+  border: none;
+  border-bottom: 1px solid #757575;
+  font-size: 18px;
+  font-style: italic;
+  background-color: #fdfac9;
+  padding: 8px;
+}
+
+.shopping-list-item-text {
+  min-width: 75vw;
 }
