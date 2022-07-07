@@ -2,6 +2,18 @@ body {
   background-color: #fff888;
 }
 
+.header-with-menu {
+ display: flex;
+  justify-content: space-between;
+  margin-right: 12px;
+  align-items: center;
+}
+
+.header-icon {
+  font-size: 24px;
+  margin-top: 12px
+}
+
 .shopping-list-container {
   margin-left: 12px;
 }
@@ -71,4 +83,79 @@ input {
 
 .shopping-list-item-text {
   min-width: 75vw;
+}
+
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.menu-button {
+  width: 50vw;
+  height: 58px;
+  border: none;
+  background-color: #fff888;
+  font-size: 16px;
+}
+
+/*Floating button*/
+.floating-add-button {
+  cursor: pointer;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #0C9;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.add-dish-button-container {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.add-dish-button {
+  background-color: #0C9;
+  border: none;
+  font-size: 16px;
+  width: 150%;
+  margin-left: -50px;
+  height: 60px;
+  color: white;
+}
+
+.dish-list-item {
+  font-size: 18px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+hr {
+  margin-right: 12px;
+  border-top: 1px solid #0000003d;;
+}
+
+.cancel-x {
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 8px;
 }

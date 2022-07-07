@@ -3,6 +3,7 @@ import { FirebaseDatabaseMutation, FirebaseDatabaseNode } from '@react-firebase/
 import LoadingScreen from './LoadingScreen';
 import ShopingItem from './ShopingItem';
 import InputField from './InputField';
+import MenuIcon from './MenuIcon';
 
 /**
  * {
@@ -20,14 +21,17 @@ import InputField from './InputField';
  */
 
 
-const ShoppingList = () => {
+const ShoppingList = ({onMenuClick}) => {
 
   const [forceUpdateWhenChange, setForceUpdate] = useState(1);
   const [editId, setEditId] = useState(null);
 
   return (
      <div className={'shopping-list-container'} key={forceUpdateWhenChange}>
-       <h1>Handlingslista</h1>
+       <div className={"header-with-menu"}>
+         <h1>Handlingslista</h1>
+         <MenuIcon onMenuClick={onMenuClick}/>
+       </div>
        <FirebaseDatabaseNode
           path="listItems"
        >
