@@ -1,6 +1,7 @@
 {
   "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Handlingslista",
+  "scope": "http://karlssonkristoffer.com/handlingslista",
   "icons": [
     {
       "src": "favicon.ico",
