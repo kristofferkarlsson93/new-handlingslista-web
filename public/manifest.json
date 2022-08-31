@@ -1,7 +1,7 @@
 {
-  "short_name": "React App",
+  "short_name": "Handlingslista",
   "name": "Handlingslista",
-  "scope": "http://karlssonkristoffer.com/handlingslista",
+  "scope": "https://karlssonkristoffer.com/handlingslista",
   "icons": [
     {
       "src": "favicon.ico",
@@ -9,17 +9,16 @@
       "type": "image/x-icon"
     },
     {
-      "src": "icon192.png",
+      "src": "icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "icon512.png",
+      "src": "icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
