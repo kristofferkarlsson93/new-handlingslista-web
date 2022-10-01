@@ -13,7 +13,8 @@ const ShopingItem = ({ item, onDelete, onRequestEdit, onEditDone }) => {
   const focusRef = React.createRef();
 
   const submitOnEnter = (e) => {
-    if (e.key === 'Enter') {
+    // keyCode 13 is 'enter' (works on mobiles)
+    if (e.key === 'Enter' || e.keyCode === 13) {
       onEditDone({ item: newItemText });
       setNewItemText('');
       setIsClicked(false)

@@ -1,17 +1,11 @@
 import React from 'react';
 
-const DishListItem = ({ dish }) => {
-
-  const goToDish = () => {
-    if (dish.maybeLink) {
-      window.open(dish.maybeLink, '_blank')
-    }
-  }
+const DishListItem = ({ dish, onDishClick }) => {
   return (
-     <div onClick={() => goToDish()}>
+     <div onClick={() => onDishClick()}>
        <div className="dish-list-item">
          <span>{dish.dishName}</span>
-         {dish.maybeLink && <span className="dish-list-link-symbol"> > </span>}
+         <span className="dish-list-link-symbol"> > </span>
        </div>
        <hr/>
      </div>

@@ -2,8 +2,12 @@ body {
   background-color: #fff888;
 }
 
+a {
+  color: #000000;
+}
+
 .header-with-menu {
- display: flex;
+  display: flex;
   justify-content: space-between;
   margin-right: 12px;
   align-items: center;
@@ -12,6 +16,9 @@ body {
 .header-icon {
   font-size: 24px;
   margin-top: 12px
+}
+.edit-icon {
+  font-size: 12px;
 }
 
 .shopping-list-container {
@@ -38,13 +45,15 @@ body {
 .input-field-container {
   background-color: #fff888;
   margin-bottom: 64px;
+  margin-right: 16px;
 }
 
 .input-field-group-container input {
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 80vw;
+  width: 100%;
+  margin-right: 12px;
   border: none;
   border-bottom: 1px solid #757575;
 }
@@ -102,14 +111,13 @@ input {
 }
 
 /*Floating button*/
-.floating-add-button {
+.floating-button {
   cursor: pointer;
   position: fixed;
   width: 60px;
   height: 60px;
   bottom: 40px;
   right: 40px;
-  background-color: #0C9;
   color: #FFF;
   border-radius: 50px;
   text-align: center;
@@ -118,6 +126,21 @@ input {
   display: flex;
   align-items: center;
   justify-content: center
+}
+
+.floating-add-button {
+  background-color: #0C9;
+}
+
+.floating-edit-button {
+ background-color: #FFFFFFE9;
+}
+
+.add-dish-text-area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-right: 12px;
 }
 
 .add-dish-button-container {
@@ -158,4 +181,25 @@ hr {
   cursor: pointer;
   font-size: 24px;
   margin-right: 8px;
+}
+
+.dish-details-container {
+  margin-top: 16px;
+}
+
+.dish-details-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  margin-bottom: 64px;
+}
+
+.dish-details-extra-info {
+  white-space: pre-wrap;
+  background-color: #ffffffbd;
+  padding: 12px 12px 12px 12px;
+  margin-right: 12px;
+  border-radius: 4px;
+  min-height: 200px;
 }
