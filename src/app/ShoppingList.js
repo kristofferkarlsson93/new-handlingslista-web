@@ -4,6 +4,7 @@ import LoadingScreen from './LoadingScreen';
 import ShopingItem from './ShopingItem';
 import InputField from './InputField';
 import MenuIcon from './MenuIcon';
+import { groupByCategory } from './logic/ItemClassifier';
 
 /**
  * {
@@ -20,8 +21,15 @@ import MenuIcon from './MenuIcon';
 }
  */
 
+const categorySortOrder = [
+  'Skafferi',
+  'Kött',
+  'Mejeri',
+  'Frukt & grönt',
+  'Övrigt'
+]
 
-const ShoppingList = ({onMenuClick}) => {
+const ShoppingList = ({ onMenuClick }) => {
 
   const [forceUpdateWhenChange, setForceUpdate] = useState(1);
   const [editId, setEditId] = useState(null);
@@ -37,44 +45,53 @@ const ShoppingList = ({onMenuClick}) => {
        >
          {result => {
            if (!result.isLoading) {
-             const items = result.value === null ? [] : Object.entries(result.value).map(([key, { item }]) => ({
+             const allItems = result.value === null ? [] : Object.entries(result.value).map(([key, { item }]) => ({
                id: key,
                item
              }))
+             const groupedItems = groupByCategory(allItems);
+             const itemsByCategories = Object.entries(groupedItems).sort(([keyA, valueA], [keyB, valueB]) => categorySortOrder.indexOf(keyA) - categorySortOrder.indexOf(keyB));
              return (
-                <div className="shopping-list-items-container">
-                  {!!items.length && items.map((item) =>
-                     editId === item.id
-                        ?
-                        <FirebaseDatabaseMutation key={item.id} path={`listItems/${item.id}`} type={'update'}>
-                          {({ runMutation }) => {
-                            return <ShopingItem
-                               item={item}
-                               onEditDone={(newText) => {
-                                 runMutation(newText)
-                                 setEditId(null)
-                                 setForceUpdate(Math.floor(Math.random() * 100))
-                               }}
-                            />
-                          }}
-                        </FirebaseDatabaseMutation>
-                        : <FirebaseDatabaseMutation key={item.id} path={`listItems/${item.id}`} type={'set'}>
-                          {({ runMutation }) => (
-                             <ShopingItem
-                                item={item}
-                                onRequestEdit={() => {
-                                  setEditId(item.id)
-                                  setForceUpdate(Math.floor(Math.random() * 100))
+                <div>{itemsByCategories.length && itemsByCategories.map(([category, items]) => {
+                  return (<div key={category}>
+                    <p className="shopping-list-category">{category}</p>
+                    <div className="shopping-list-items-container">
+                      {!!items.length && items.map((item) => {
+                           return editId === item.id
+                              ?
+                              <FirebaseDatabaseMutation key={item.id} path={`listItems/${item.id}`} type={'update'}>
+                                {({ runMutation }) => {
+                                  return <ShopingItem
+                                     item={item}
+                                     onEditDone={(newText) => {
+                                       runMutation(newText)
+                                       setEditId(null)
+                                       setForceUpdate(Math.floor(Math.random() * 100))
+                                     }}
+                                  />
                                 }}
-                                onDelete={() => {
-                                  runMutation(null)
-                                  setForceUpdate(Math.floor(Math.random() * 100))
-                                }}
-                             />
-                          )}
-                        </FirebaseDatabaseMutation>
-                  )}
-                </div>
+                              </FirebaseDatabaseMutation>
+                              : <FirebaseDatabaseMutation key={item.id} path={`listItems/${item.id}`} type={'set'}>
+                                {({ runMutation }) => (
+                                   <ShopingItem
+                                      item={item}
+                                      onRequestEdit={() => {
+                                        setEditId(item.id)
+                                        setForceUpdate(Math.floor(Math.random() * 100))
+                                      }}
+                                      onDelete={() => {
+                                        runMutation(null)
+                                        setForceUpdate(Math.floor(Math.random() * 100))
+                                      }}
+                                   />
+                                )}
+                              </FirebaseDatabaseMutation>
+                         }
+                      )}
+                    </div>
+                  </div>)
+
+                })}</div>
              )
            } else return <LoadingScreen/>;
          }}

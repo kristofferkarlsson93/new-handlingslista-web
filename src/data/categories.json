@@ -1,0 +1,68 @@
+{
+  "categories": [
+    {
+      "name": "Mejeri",
+      "itemMatchers": [
+        "creme",
+        "kräm",
+        "grädde",
+        "mjölk",
+        "turkisk",
+        "yoghurt"
+      ]
+    },
+    {
+      "name": "Frukt & grönt",
+      "itemMatchers": [
+        "morot",
+        "lök",
+        "potatis",
+        "avo",
+        "gurka",
+        "tomat",
+        "kål",
+        "selleri",
+        "rot",
+        "sallad",
+        "frukt",
+        "banan",
+        "äpple",
+        "verts",
+        "harry",
+        "ärtor"
+      ]
+    },
+    {
+      "name": "Skafferi",
+      "itemMatchers": [
+        "olja",
+        "krossade tomater",
+        "krossade",
+        "pure",
+        "puré",
+        "kakao",
+        "cocos",
+        "raps",
+        "pasta",
+        "ris",
+        "finm crisp",
+        "bröd",
+        "kaffe",
+        "buljong",
+        "fond"
+      ]
+    },
+    {
+      "name": "Kött",
+      "itemMatchers": [
+        "kyckling",
+        "högrev",
+        "kött",
+        "bacon",
+        "fransyska",
+        "korv",
+        "skinka"
+      ]
+    }
+  ]
+}
