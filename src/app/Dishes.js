@@ -20,7 +20,7 @@ const Dishes = ({ onMenuClick }) => {
   const editDish = (runMutation, name, link, extraInfo) => {
     runMutation({ dishName: name, maybeLink: link, extraInfo: extraInfo })
     setShowEditDish(false);
-    setSelectedDish({ dishName: name, maybeLink: link, extraInfo })
+    setSelectedDish({ dishName: name, maybeLink: link, extraInfo, id: selectedDish.id })
   }
 
   const openDishDetails = (dish) => {

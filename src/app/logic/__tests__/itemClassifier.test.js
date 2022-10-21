@@ -29,4 +29,15 @@ describe('ItemClassiferi', () => {
     const input = [{ id: 'a', item: 'Kräm fräsh' }] // in the json `kräm` is lowercase
     expect(groupByCategory(input)).toEqual({ 'Mejeri': [{ id: 'a', item: 'Kräm fräsh', category: 'Mejeri' }] });
   });
+
+  it('should classify item "grönt: Kött" as Frukt och grönt', () => {
+    const input = [{ id: 'a', item: 'grönt: köttbullar' }]
+    expect(groupByCategory(input)).toEqual({
+      'Frukt & grönt': [{
+        id: 'a',
+        item: 'köttbullar',
+        category: 'Frukt & grönt'
+      }]
+    })
+  })
 })

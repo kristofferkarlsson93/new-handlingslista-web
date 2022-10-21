@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import InputField from './InputField';
+import FloatingCheckButton from './FloatingCheckButton';
 
 const UpsertDish = ({ onUpsert, onCancel, initialName, initialLink, initialExtraInfo }) => {
   const [name, setName] = useState(initialName || '')
@@ -48,10 +49,8 @@ const UpsertDish = ({ onUpsert, onCancel, initialName, initialLink, initialExtra
            </div>
          </label>
        </div>
-       <div>{error && <p>{error}</p>}</div>
-       <div className="add-dish-button-container">
-         <button className="add-dish-button" onClick={() => addNewItem()}>Spara</button>
-       </div>
+       <div>{error && <p className="shopping-list-error-text">{error}</p>}</div>
+       <FloatingCheckButton onClick={() => addNewItem()}/>
 
      </div>
   );

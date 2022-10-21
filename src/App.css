@@ -17,6 +17,7 @@ a {
   font-size: 24px;
   margin-top: 12px
 }
+
 .edit-icon {
   font-size: 12px;
 }
@@ -24,12 +25,14 @@ a {
 .shopping-list-container {
   margin-left: 12px;
 }
+
 .shopping-list-category {
   font-size: 14px;
   margin-bottom: 0;
   font-weight: bold;
   margin-left: -4px;
 }
+
 .shopping-list-items-container {
   overflow-x: auto;
   margin-bottom: 12px;
@@ -138,7 +141,7 @@ input {
 }
 
 .floating-edit-button {
- background-color: #FFFFFFE9;
+  background-color: #FFFFFFE9;
 }
 
 .add-dish-text-area {
@@ -146,25 +149,6 @@ input {
   align-items: flex-start;
   justify-content: center;
   margin-right: 12px;
-}
-
-.add-dish-button-container {
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.add-dish-button {
-  background-color: #0C9;
-  border: none;
-  font-size: 16px;
-  width: 150%;
-  margin-left: -50px;
-  height: 60px;
-  color: white;
 }
 
 .dish-list-item {
@@ -207,4 +191,8 @@ hr {
   margin-right: 12px;
   border-radius: 4px;
   min-height: 200px;
+}
+
+.shopping-list-error-text {
+  color: #FC5A03FF
 }

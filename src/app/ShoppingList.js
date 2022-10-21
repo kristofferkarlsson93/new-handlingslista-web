@@ -96,7 +96,7 @@ const ShoppingList = ({ onMenuClick }) => {
            } else return <LoadingScreen/>;
          }}
        </FirebaseDatabaseNode>
-       <FirebaseDatabaseMutation type="push" path={'listItems'}>
+       {!editId && <FirebaseDatabaseMutation type="push" path={'listItems'}>
          {({ runMutation }) => {
            return (
               <div className="input-field-container">
@@ -105,7 +105,7 @@ const ShoppingList = ({ onMenuClick }) => {
               </div>
            );
          }}
-       </FirebaseDatabaseMutation>
+       </FirebaseDatabaseMutation>}
      </div>
   );
 };

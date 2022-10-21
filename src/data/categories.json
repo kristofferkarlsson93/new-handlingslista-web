@@ -2,17 +2,23 @@
   "categories": [
     {
       "name": "Mejeri",
+      "overrideMatcher": "mejeri",
       "itemMatchers": [
         "creme",
         "kräm",
         "grädde",
         "mjölk",
         "turkisk",
-        "yoghurt"
+        "yoghurt",
+        "smör",
+        "bregott",
+        "kvarg",
+        "smetana"
       ]
     },
     {
       "name": "Frukt & grönt",
+      "overrideMatcher": "grönt",
       "itemMatchers": [
         "morot",
         "lök",
@@ -29,11 +35,19 @@
         "äpple",
         "verts",
         "harry",
-        "ärtor"
+        "ärtor",
+        "paprika",
+        "broccoli",
+        "pumpa",
+        "beta",
+        "mango",
+        "spenat",
+        "champi"
       ]
     },
     {
       "name": "Skafferi",
+      "overrideMatcher": "skafferi",
       "itemMatchers": [
         "olja",
         "krossade tomater",
@@ -49,11 +63,19 @@
         "bröd",
         "kaffe",
         "buljong",
-        "fond"
+        "fond",
+        "ost",
+        "nötmix",
+        "nötter",
+        "kärnor",
+        "parmesan",
+        "permesan",
+        "pamme"
       ]
     },
     {
       "name": "Kött",
+      "overrideMatcher": "kött",
       "itemMatchers": [
         "kyckling",
         "högrev",
@@ -61,7 +83,10 @@
         "bacon",
         "fransyska",
         "korv",
-        "skinka"
+        "skinka",
+        "filé",
+        "file",
+        "chark"
       ]
     }
   ]

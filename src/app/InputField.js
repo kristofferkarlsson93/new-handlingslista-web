@@ -23,6 +23,7 @@ const InputField = (props) => {
             type="text" value={item}
             onChange={e => onKeyStroke(e)}
             onKeyPress={e => submitOnEnter(e)}
+            placeholder={props.placeholder || ''}
          />
        </div>
 
