@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { FirebaseDatabaseProvider } from '@react-firebase/database';
 import firebase from 'firebase';
 import { firebaseConfig } from './modules/firebase';
 import ShoppingList from './app/ShoppingList';
 import Dishes from './app/Dishes';
+import { Tab, Tabs } from './app/Tabs';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('shoppingList');
   return (
      <div className="App">
        <FirebaseDatabaseProvider firebase={firebase} {...firebaseConfig}>
-         {activeTab === 'shoppingList' ? <ShoppingList onMenuClick={() => setActiveTab('dishes')}/> :
-            <Dishes onMenuClick={() => setActiveTab('shoppingList')}/>}
-         {/*<BottomMenu onShoppingListClick={() => setActiveTab('shoppingList')} onRecepiesClick={() => setActiveTab('recepies')}/>*/}
+         <Tabs>
+           <Tab label="Handlingslista">
+             <ShoppingList/>
+             </Tab>
+           <Tab label="Maträtter">
+             <Dishes />
+           </Tab>
+         </Tabs>
        </FirebaseDatabaseProvider>
      </div>
   );

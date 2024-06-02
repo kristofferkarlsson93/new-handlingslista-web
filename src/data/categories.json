@@ -13,7 +13,9 @@
         "smör",
         "bregott",
         "kvarg",
-        "smetana"
+        "smetana",
+        "feta",
+        "fil"
       ]
     },
     {
@@ -42,7 +44,15 @@
         "beta",
         "mango",
         "spenat",
-        "champi"
+        "champi",
+        "ingefära",
+        "päron",
+        "melon",
+        "mango",
+        "jordgubbar",
+        "ananas",
+        "citron",
+        "palsternacka"
       ]
     },
     {
@@ -59,7 +69,7 @@
         "raps",
         "pasta",
         "ris",
-        "finm crisp",
+        "finn crisp",
         "bröd",
         "kaffe",
         "buljong",
@@ -70,7 +80,22 @@
         "kärnor",
         "parmesan",
         "permesan",
-        "pamme"
+        "pamme",
+        "tomatpure",
+        "tomatpuré",
+        "mjöl",
+        "socker",
+        "majs",
+        "krydda",
+        "soja",
+        "flingor",
+        "mysli",
+        "müsli",
+        "sylt",
+        "marmelad",
+        "bakpulver",
+        "kanel",
+        "peppar"
       ]
     },
     {
@@ -86,7 +111,8 @@
         "skinka",
         "filé",
         "file",
-        "chark"
+        "chark",
+        "färs"
       ]
     }
   ]

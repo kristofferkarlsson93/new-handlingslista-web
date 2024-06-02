@@ -29,17 +29,13 @@ const categorySortOrder = [
   'Övrigt'
 ]
 
-const ShoppingList = ({ onMenuClick }) => {
+const ShoppingList = () => {
 
   const [forceUpdateWhenChange, setForceUpdate] = useState(1);
   const [editId, setEditId] = useState(null);
 
   return (
      <div className={'shopping-list-container'} key={forceUpdateWhenChange}>
-       <div className={"header-with-menu"}>
-         <h1>Handlingslista</h1>
-         <MenuIcon onMenuClick={onMenuClick}/>
-       </div>
        <FirebaseDatabaseNode
           path="listItems"
        >

@@ -4,11 +4,10 @@ import LoadingScreen from './LoadingScreen';
 import FloatingAddButton from './FloatingAddButton';
 import UpsertDish from './UpsertDish';
 import DishListItem from './DishListItem';
-import MenuIcon from './MenuIcon';
 import DishDetails from './DishDetails';
 
-const Dishes = ({ onMenuClick }) => {
-  const DISHES_PATH = "dishes";
+const Dishes = () => {
+  const DISHES_PATH = 'dishes';
   const [showAddDishPage, setShowAddDish] = useState(false);
   const [showEditDish, setShowEditDish] = useState(false)
   const [selectedDish, setSelectedDish] = useState(null)
@@ -66,10 +65,6 @@ const Dishes = ({ onMenuClick }) => {
   } else {
     return (
        <div className="shopping-list-container">
-         <div className="header-with-menu">
-           <h1>Maträtter</h1>
-           <MenuIcon onMenuClick={onMenuClick}/>
-         </div>
          <FirebaseDatabaseNode path={DISHES_PATH}>{result => {
            if (!result.isLoading) {
              const dishes = result.value === null ? [] : Object.entries(result.value).map(([key, value]) => ({
@@ -78,6 +73,12 @@ const Dishes = ({ onMenuClick }) => {
                maybeLink: value.maybeLink,
                extraInfo: value.extraInfo
              })).filter(d => !!d.dishName) // remove scrap
+                .sort((a, b) => {
+                  if (a.dishName === 'Tips och Trix') return 1;
+                  if (b.dishName === 'Tips och Trix') return -1;
+                  return a.dishName.localeCompare(b.dishName);
+                })
+
              return dishes.map((dish, i) => {
                   return <DishListItem key={i} dish={dish} onDishClick={() => openDishDetails(dish)}/>
                 }
