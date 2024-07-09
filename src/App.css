@@ -6,12 +6,16 @@ a {
   color: #000000;
 }
 
+.tab-buttons {
+  display: flex;
+}
+
 .tab-button {
-  border-top: 1px solid #0000003d;
-  border-right: 1px solid #0000003d;
+  border-top: none;
+  border-right: none;
   border-bottom: 1px solid #0000003d;
   border-left: 1px solid #0000003d;
-  background-color: #d9d19f;
+  background-color: rgba(217, 209, 174, 0.53);
   outline:none;
   height: 50px;
   width: 50%;
@@ -215,4 +219,14 @@ hr {
 
 .shopping-list-error-text {
   color: #FC5A03FF
+}
+
+.add-other-item-input-container {
+  margin-top: 32px;
+}
+
+.other-list-instructions {
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
 }

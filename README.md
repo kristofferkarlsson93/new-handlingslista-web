@@ -8,7 +8,7 @@ rm -rf ~/dev/webb-handlingslista/build/handlingslista
 
 npm run build
 
-cp -a -r build/. ../build/handlingslista
+cp -a build/. ../build/handlingslista
 
 // go to /webb-handlingslista/build
 scp -r handlingslista/. root@karlssonkristoffer.com:/var/www/html/handlingslista

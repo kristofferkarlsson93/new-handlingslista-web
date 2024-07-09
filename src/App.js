@@ -6,6 +6,7 @@ import { firebaseConfig } from './modules/firebase';
 import ShoppingList from './app/ShoppingList';
 import Dishes from './app/Dishes';
 import { Tab, Tabs } from './app/Tabs';
+import OtherList from './app/OtherList';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
          <Tabs>
            <Tab label="Handlingslista">
              <ShoppingList/>
+             </Tab>
+           <Tab label="Annat">
+             <OtherList/>
              </Tab>
            <Tab label="Maträtter">
              <Dishes />

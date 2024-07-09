@@ -3,7 +3,6 @@ import { FirebaseDatabaseMutation, FirebaseDatabaseNode } from '@react-firebase/
 import LoadingScreen from './LoadingScreen';
 import ShopingItem from './ShopingItem';
 import InputField from './InputField';
-import MenuIcon from './MenuIcon';
 import { groupByCategory } from './logic/ItemClassifier';
 
 /**

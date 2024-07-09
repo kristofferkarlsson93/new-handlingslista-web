@@ -22,11 +22,13 @@ const ShopingItem = ({ item, onDelete, onRequestEdit, onEditDone }) => {
   }
 
   const editOnDoubleClick = () => {
-    if (isClicked) {
-      onRequestEdit();
-      setIsClicked(false)
-    } else {
-      setIsClicked(true);
+    if (onRequestEdit) {
+      if (isClicked) {
+        onRequestEdit();
+        setIsClicked(false)
+      } else {
+        setIsClicked(true);
+      }
     }
   }
 
