@@ -21,10 +21,11 @@ import { groupByCategory } from './logic/ItemClassifier';
  */
 
 const categorySortOrder = [
-  'Skafferi',
-  'Kött',
-  'Mejeri',
+   "Hygienartiklar och barn",
   'Frukt & grönt',
+  'Mejeri',
+  'Kött',
+  'Skafferi',
   'Övrigt'
 ]
 

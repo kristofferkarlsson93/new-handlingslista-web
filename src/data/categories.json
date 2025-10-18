@@ -1,6 +1,48 @@
 {
   "categories": [
     {
+      "name": "Hygienartiklar och barn",
+      "overrideMatcher": "hygien",
+      "itemMatchers": [
+        "schampo",
+        "shampoo",
+        "balsam",
+        "tvål",
+        "handtvätt",
+        "dusch",
+        "rakblad",
+        "rakhyvel",
+        "raklödder",
+        "tandkräm",
+        "tandborst",
+        "munskölj",
+        "deo",
+        "blöja",
+        "blöjor",
+        "våtservett",
+        "bomull",
+        "tops",
+        "plåster",
+        "nagel",
+        "hårspray",
+        "hudkräm",
+        "bodylotion",
+        "ansiktskräm",
+        "ansiktstvätt",
+        "hygien",
+        "toalettpapper",
+        "toapapper",
+        "bindor",
+        "tampong",
+        "mensskydd",
+        "handsprit",
+        "desinfektion",
+        "klorent",
+        "rengöring",
+        "klämmis"
+      ]
+    },
+    {
       "name": "Mejeri",
       "overrideMatcher": "mejeri",
       "itemMatchers": [
@@ -106,8 +148,7 @@
         "spagetti",
         "spaghetti",
         "ketchup",
-        "senap",
-        "klämmis"
+        "senap"
       ]
     },
     {
