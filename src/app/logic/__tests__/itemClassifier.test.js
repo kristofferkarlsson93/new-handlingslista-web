@@ -25,6 +25,13 @@ describe('ItemClassiferi', () => {
     });
   });
 
+  it('should classify tomatpuré as skafferi', () => {
+    const input = [{ id: 'a', item: 'tomatpuré' }]
+    expect(groupByCategory(input)).toEqual({
+      'Skafferi': [{ id: 'a', item: 'tomatpuré', category: 'Skafferi' }],
+    });
+  });
+
   it('should not care about case', () => {
     const input = [{ id: 'a', item: 'Kräm fräsh' }] // in the json `kräm` is lowercase
     expect(groupByCategory(input)).toEqual({ 'Mejeri': [{ id: 'a', item: 'Kräm fräsh', category: 'Mejeri' }] });

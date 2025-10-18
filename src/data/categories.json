@@ -23,6 +23,7 @@
       "overrideMatcher": "grönt",
       "itemMatchers": [
         "morot",
+        "morötter",
         "lök",
         "potatis",
         "avo",
@@ -52,7 +53,10 @@
         "jordgubbar",
         "ananas",
         "citron",
-        "palsternacka"
+        "palsternacka",
+        "lime",
+        "clementin",
+        "apelsin"
       ]
     },
     {
@@ -95,7 +99,15 @@
         "marmelad",
         "bakpulver",
         "kanel",
-        "peppar"
+        "peppar",
+        "vin",
+        "havre",
+        "rostad",
+        "spagetti",
+        "spaghetti",
+        "ketchup",
+        "senap",
+        "klämmis"
       ]
     },
     {
@@ -112,7 +124,12 @@
         "filé",
         "file",
         "chark",
-        "färs"
+        "färs",
+        "fisk",
+        "lax",
+        "torsk",
+        "lövbiff",
+        "entrecote"
       ]
     }
   ]

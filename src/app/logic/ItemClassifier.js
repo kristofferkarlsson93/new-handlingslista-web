@@ -14,14 +14,35 @@ export const groupByCategory = (items) => {
       }
     }
 
-    const matchingCategory = categories.categories.find(c => c.itemMatchers.some(m => item.item.toLowerCase().includes(m.toLowerCase())))
-    if (matchingCategory) {
-      return { category: matchingCategory.name, ...item }
+    const bestMatchingCategory = findMostMatchingCategory(item);
+    if (bestMatchingCategory) {
+      return { category: bestMatchingCategory.category, ...item }
     } else {
       return { category: 'Övrigt', ...item }
     }
   });
 
   return groupBy(result, 'category');
-
 }
+
+const findMostMatchingCategory = (item) => {
+  const matchResults = AllMatchersWithCategories.map(({ category, matcher }) => {
+    const index = item.item.toLowerCase().indexOf(matcher.toLowerCase());
+    const matchLength = index !== -1 ? matcher.length : 0;
+
+    return { category, matcher, result: matchLength }
+  })
+     .filter(entry => entry.result >= 3) // Don't allow short matches.
+
+  if (matchResults.length) {
+    return matchResults.reduce((max, item) => // { category: 'Skafferi', matcher: 'tomatpuré', result: 9 }
+       item.result > max.result ? item : max
+    );
+  }
+  else return null
+}
+
+const AllMatchersWithCategories = categories.categories.flatMap(c => c.itemMatchers.map(m => ({
+  category: c.name,
+  matcher: m
+})));
